@@ -20,7 +20,6 @@
             </header>
 
             <section>
-                <!-- sort buttons; you will add attributes and code to make them resort the list -->
                 <div class="sort-ui">
                     <span>Sort By: </span>
                     <div class="btn-group">
@@ -29,7 +28,6 @@
                         <button type="button" class="btn btn-default" ng-click="order = 'department'" ng-class="{active: order('department')}">Department</button>
                     </div>
                 </div>
-                <!-- filter input; you will add attributes to make this filter the list based on value entered -->
                 <div class="filter-ui">
                     <input type="text" class="form-control" placeholder="Search..." ng-model="search">
                 </div>
@@ -43,8 +41,8 @@
                             <h2 class="name">{{employee.firstName}} {{employee.lastName}}</h2>
                             <p class="title">{{employee.title}}</p>
                             <p class="department">{{employee.department}}</p>
-                            <p class="phone" ng-if="employee.phone" ng-href="tel:{{employee.phone}}"><a>{{employee.phone}}</a></p>
-                            <p class="email" ng-if="employee.email" ng-href="mailto:{{employee.email}}"><a>{{employee.email}}</a></p>
+                            <p class="phone"><a ng-if="employee.phone" ng-href="tel:{{employee.phone}}">{{employee.phone}}</a></p>
+                            <p class="email"><a ng-if="employee.email" ng-href="mailto:{{employee.email}}">{{employee.email}}</a></p>
                         </div>
                     </li>
                 </ul>
